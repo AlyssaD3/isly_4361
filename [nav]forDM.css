@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-size: 24px;
+}
+
+header {
+    width: 100%;
+    padding: 0;
+    background: #F7A3B1;
+}
+
+.responsive {
+    width: 100%;
+    max-width: 1903px;
+    height: auto;
+  }
+
+header ul {
+    display: flex;
+    justify-content: center;
+    max-width: 2000px;
+    margin: 0px;
+    padding: 0px;
+}
+
+header ul li {
+    list-style: none;
+    position: relative;
+    padding: 10px 0px;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+header ul li:hover {
+    background: #C8D0D8;
+}
+
+header ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 0 20px;
+}  
+
+header ul li ul {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    background: #F7A3B1;
+    display: block;
+    width: 128px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}    
+
+header ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+}   
+
+@media (max-width: 768px) {
+    header ul {
+        display: block;
+    }
+    header ul li {
+        display: block;
+    }
+    header ul li ul{
+        width: 100%;
+        z-index: 1;
+    }
+       /* I am also trying to figure out the responsive design for .welcomebanner {} */
+}
+
+@media (min-width: 368px) {
+    .welcomebanner {
+        display: block;
+    }
+}    
